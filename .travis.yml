@@ -17,7 +17,7 @@ after_success:
     # log in to the docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # push the images to docker hub
-    - docker push apirutv/muilti-client 
+    - docker push apirutv/multi-client 
     - docker push apirutv/multi-nginx 
     - docker push apirutv/multi-server
     - docker push apirutv/multi-worker 
