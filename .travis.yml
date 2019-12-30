@@ -10,14 +10,14 @@ script:
     - docker run -e CI=true react-test npm test 
 
 after_success:
-    - docker build -t multi-client ./client 
-    - docker build -t multi-nginx ./nginx 
-    - docker build -t multi-server ./server 
-    - docker build -t multi-worker ./worker
+    - docker build -t apirutv/multi-client ./client 
+    - docker build -t apirutv/multi-nginx ./nginx 
+    - docker build -t apirutv/multi-server ./server 
+    - docker build -t apirutv/multi-worker ./worker
     # log in to the docker CLI
     - echo "$DOCKER_PASSWORD" | docker login - u "$DOCKER_ID" --password-stdin
     # push the images to docker hub
-    - docker push muilti-client 
-    - docker push multi-nginx 
-    - docker push multi-server
-    - docker push multi-worker 
+    - docker push apirutv/muilti-client 
+    - docker push apirutv/multi-nginx 
+    - docker push apirutv/multi-server
+    - docker push apirutv/multi-worker 
