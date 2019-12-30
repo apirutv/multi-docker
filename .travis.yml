@@ -15,6 +15,8 @@ after_success:
     - docker build -t apirutv/multi-server ./server 
     - docker build -t apirutv/multi-worker ./worker
     # log in to the docker CLI
+    - echo "$DOCKER_ID"
+    - echo "$DOCKER_PASSWORD"
     - echo "$DOCKER_PASSWORD" | docker login - u "$DOCKER_ID" --password-stdin
     # push the images to docker hub
     - docker push apirutv/muilti-client 
