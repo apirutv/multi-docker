@@ -1,0 +1,23 @@
+# specify a base image
+# the alpine (minimal version) of Node.js
+# official image
+FROM node:alpine
+
+# specify the working directory
+# any following command will be executed
+# relative to this path in the container
+WORKDIR /app
+
+# copy what needed by 'npm install'
+# to container directory
+COPY ./package.json ./
+
+# install some dependencies
+RUN npm install
+
+# copy all file from current working directory
+# to container directory
+COPY ./ ./
+
+# defaule commanads
+CMD ["npm", "run", "start"]
