@@ -23,9 +23,10 @@ after_success:
     - docker push apirutv/multi-worker 
 
 deploy:
+    edge: true 
     provider: elasticbeanstalk
     region: us-east-1
-    app: multi-docker
+    app: docker-react
     env: DockerReact-env
     bucket_name: elasticbeanstalk-us-east-1-342017321189
     bucker_path: docker-multi
