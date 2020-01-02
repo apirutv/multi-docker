@@ -1,11 +1,12 @@
 {
-    "AWSEBDockerrunVersion ": 2,
+    "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
         {
             "name": "client",
             "image": "apirutv/multi-client",
             "hostname": "client",
-            "essential": false
+            "essential": false,
+            "memo"
         },
         {
             "name": "server",
