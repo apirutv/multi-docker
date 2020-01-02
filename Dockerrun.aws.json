@@ -5,8 +5,7 @@
             "name": "client",
             "image": "apirutv/multi-client",
             "hostname": "client",
-            "essential": false,
-            "memo"
+            "essential": false
         },
         {
             "name": "server",
